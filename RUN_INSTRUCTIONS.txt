@@ -1,0 +1,61 @@
+REPO HEADS EPIC FIGHT COMPAT 0.2.1
+===================================
+
+WHAT IS INCLUDED
+----------------
+- libs/repo-heads-epicfight-compat-0.2.1.jar
+  The renamed mod JAR.
+- build.gradle / settings.gradle
+  A small Gradle packaging project. It copies the supplied mod JAR into
+  build/libs when you run the build task.
+
+IMPORTANT
+---------
+This archive contains the prebuilt mod JAR and a Gradle packaging project.
+It does NOT contain the original Java source code, so Gradle does not compile
+the mod from source. It packages the included JAR.
+
+HOW TO INSTALL THE MOD IN MINECRAFT
+-----------------------------------
+1. Make sure you use Minecraft 1.20.1 with Forge 47.x.
+2. Make sure the required REPO Heads mod is installed.
+3. Copy this file:
+   libs/repo-heads-epicfight-compat-0.2.1.jar
+   into your Minecraft instance's mods folder.
+4. Start Minecraft.
+
+The add-on metadata declares REPO Heads 1.2.1 as its required dependency.
+The JAR is intended for the Epic Fight compatibility build. The original
+mod id remains repo_combat_compat to preserve the internal identifiers.
+
+HOW TO RUN THE GRADLE TASK (WINDOWS)
+------------------------------------
+Requirement: a Java 17 JDK and Gradle installed and available in PATH.
+
+1. Extract the ZIP to a normal folder.
+2. Open PowerShell in the extracted project folder.
+3. Run:
+      gradle.bat build
+   If gradle.bat is not available, run:
+      gradle build
+
+4. After a successful build, the packaged JAR will be here:
+      build\libs\repo-heads-epicfight-compat-0.2.1.jar
+
+HOW TO RUN THE GRADLE TASK (LINUX / MAC)
+----------------------------------------
+Requirement: Java 17 and Gradle installed.
+
+From the extracted project folder run:
+      gradle build
+
+The output will be in:
+      build/libs/repo-heads-epicfight-compat-0.2.1.jar
+
+TROUBLESHOOTING
+---------------
+- 'gradle is not recognized': install Gradle and add its bin directory to PATH,
+  or use an IDE with Gradle support.
+- Minecraft says a dependency is missing: verify Forge 1.20.1 and REPO Heads
+  are installed in the same instance.
+- This Gradle project is a packaging wrapper, not a source-code workspace.

@@ -1,0 +1,17 @@
+plugins {
+    id 'base'
+}
+
+group = 'compat.repo'
+version = '0.2.1'
+
+def modJar = file('libs/repo-heads-epicfight-compat-0.2.1.jar')
+
+tasks.register('packageMod', Copy) {
+    from modJar
+    into layout.buildDirectory.dir('libs')
+}
+
+tasks.named('build') {
+    dependsOn tasks.named('packageMod')
+}
